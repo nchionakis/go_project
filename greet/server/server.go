@@ -1,7 +1,7 @@
 package main
 
 import (
-	"awesomeProject/go_project/greet/greetpb"
+	"opcua/grpc/example/greet/greetpb"
 	"context"
 	"google.golang.org/grpc"
 	"log"

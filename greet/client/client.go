@@ -1,10 +1,10 @@
 package main
 
 import (
-	"awesomeProject/go_project/greet/greetpb"
 	"context"
 	"google.golang.org/grpc"
 	"log"
+	"opcua/grpc/example/greet/greetpb"
 )
 
 func main() {

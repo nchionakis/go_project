@@ -1,13 +1,13 @@
 package main
 
 import (
-	"awesomeProject/go_project/tag/tagpb"
 	"context"
 	"fmt"
 	"github.com/gopcua/opcua"
 	"google.golang.org/grpc"
 	"io"
 	"log"
+	"opcua/grpc/example/tag/tagpb"
 	"time"
 )
 
@@ -19,7 +19,6 @@ func main() {
 		log.Fatalf("%v", err)
 	}
 	defer cc.Close()
-
 	c := tagpb.NewStreamTagEveryoneServiceClient(cc)
 	// fmt.Printf("Created Client: %f", c)
 	uc := Init()

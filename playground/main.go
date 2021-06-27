@@ -1,13 +1,12 @@
 package main
 
 import (
-	"awesomeProject/go_project/person/personpb"
 	"encoding/json"
 	"fmt"
 	"google.golang.org/protobuf/proto"
 	"io/ioutil"
 	"log"
-
+	"opcua/grpc/example/person/personpb"
 )
 
 func main() {

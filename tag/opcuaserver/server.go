@@ -2,7 +2,6 @@
 package main
 
 import (
-	"awesomeProject/go_project/tag/tagpb"
 	"context"
 	"github.com/improbable-eng/grpc-web/go/grpcweb"
 	"google.golang.org/grpc"
@@ -10,6 +9,7 @@ import (
 	"log"
 	"net"
 	"net/http"
+	"opcua/grpc/example/tag/tagpb"
 	"time"
 )
 
