@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package tag;
+
+option go_package ="/tagpb";
+
+message Tag {
+  double flow = 1;
+}
+
+message TagRequest{
+  Tag tag = 1;
+}
+
+message TagResponse{
+  double result = 1;
+}
+
+message StreamTagRequest{
+  Tag tag = 1;
+}
+
+message StreamTagResponse{
+  double result = 1;
+}
+
+message StreamTagEveryoneRequest{
+  Tag tag = 1;
+}
+
+message StreamTagEveryoneResponse{
+  double result = 1;
+}
+
+service TagService{
+  rpc Tag(TagRequest) returns (TagResponse) {};
+}
+
+service StreamTagService{
+  rpc StreamTag(StreamTagRequest) returns (stream StreamTagResponse) {};
+}
+
+service StreamTagEveryoneService{
+  rpc StreamTagEveryone(stream StreamTagEveryoneRequest) returns (stream StreamTagEveryoneResponse) {};
+}
